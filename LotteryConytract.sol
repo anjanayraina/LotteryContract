@@ -50,6 +50,8 @@ contract LotteryContract is AccessControl{
         lotteryOpen = true;
     }
 
+    /// @notice grants the role of a better to a caller address
+    /// params to the address that is granted the role of the better 
     function grantBetterRole(address to) external isAdmin {
         _grantRole( BETTING_STARTER , to);
     }
